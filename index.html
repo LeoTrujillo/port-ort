@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellthy - Find Peace of Mind with Mental Health Care</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .btn-primary {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: #fafafa;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .hero-description {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .play-video {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .play-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .hero-logo {
+            font-size: 120px;
+            font-weight: 900;
+            text-align: center;
+            margin-top: 60px;
+            letter-spacing: 20px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: #2a2a2a;
+            color: white;
+        }
+
+        .about h2 {
+            font-size: 48px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .about-card {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .about-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Mental Issues Section */
+        .mental-issues {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .mental-issues h2 {
+            font-size: 48px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .issues-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .issues-list {
+            list-style: none;
+        }
+
+        .issues-list li {
+            padding: 24px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .issues-list li:hover {
+            color: #666;
+        }
+
+        .issues-image {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .issues-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .issues-image-label {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: rgba(255,255,255,0.95);
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+
+        .services h2 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .services-description {
+            text-align: center;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Healing Path Section */
+        .healing-path {
+            padding: 100px 0;
+            background: #2a2a2a;
+            color: white;
+            text-align: center;
+        }
+
+        .healing-path h2 {
+            font-size: 48px;
+            margin-bottom: 60px;
+        }
+
+        .path-steps {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right, #fff, #f0f0f0, #e0e0e0, #c0c0c0, #a0a0a0);
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .path-step {
+            flex: 1;
+            padding: 60px 20px;
+            font-size: 80px;
+            font-weight: 900;
+            color: #333;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .benefits h2 {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .benefits-description {
+            color: #666;
+            max-width: 600px;
+            margin-bottom: 60px;
+        }
+
+        .benefits-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .benefits-image img {
+            width: 100%;
+            border-radius: 16px;
+        }
+
+        .benefits-list h3 {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+
+        /* Doctors Section */
+        .doctors {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+
+        .doctors h2 {
+            font-size: 48px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .doctor-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .doctor-info {
+            padding: 24px;
+        }
+
+        .doctor-info h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .doctor-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Schedule Section */
+        .schedule {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .schedule-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .schedule h2 {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .schedule-description {
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .schedule-slots {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .schedule-slot {
+            background: #fafafa;
+            padding: 24px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slot-info h4 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .slot-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .slot-time {
+            color: #666;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: #2a2a2a;
+            color: white;
+        }
+
+        .testimonials h2 {
+            font-size: 48px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-grid-bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            color: #333;
+            padding: 32px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .testimonial-content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .blog h2 {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .blog-description {
+            color: #666;
+            max-width: 700px;
+            margin-bottom: 60px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .blog-card-content {
+            padding: 24px;
+        }
+
+        .blog-date {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .blog-card h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .blog-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+        }
+
+        .blog-author span {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .read-more {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: #2a2a2a;
+            color: white;
+        }
+
+        .faq h2 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .faq-description {
+            text-align: center;
+            color: #999;
+            margin-bottom: 60px;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            padding: 32px 0;
+            border-bottom: 1px solid #444;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        /* Contact Form Section */
+        .contact-form {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-form h2 {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer-info p {
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .footer-links h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .newsletter input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background: #2a2a2a;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .footer-logo {
+            font-size: 100px;
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: 15px;
+            margin-bottom: 40px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-bottom-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content,
+            .issues-content,
+            .services-grid,
+            .doctors-grid,
+            .schedule-content,
+            .testimonials-grid,
+            .testimonials-grid-bottom,
+            .blog-grid,
+            .contact-content,
+            .footer-content,
+            .benefits-content,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-logo {
+                font-size: 48px;
+                letter-spacing: 8px;
+            }
+
+            .section-title,
+            h2 {
+                font-size: 32px !important;
+            }
+
+            .path-steps {
+                flex-wrap: wrap;
+            }
+
+            .footer-logo {
+                font-size: 48px;
+                letter-spacing: 8px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span>🏥</span>
+                <span>wellthy</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Demo pages</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#pricing" class="btn btn-outline">Pricing</a>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Find Peace of Mind with Wellthy</h1>
+                    <p class="hero-description">Experience a comprehensive holistic approach to mental health care, fostering balance, tranquility, mindful awareness, resilience, and renewed vitality in every aspect of your life.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Start your journey →</a>
+                        <a href="#" class="play-video">
+                            <div class="play-icon">▶</div>
+                            <div>
+                                <div style="font-size: 12px; color: #999;">Play Video</div>
+                                <div style="font-weight: 600;">How can we help you?</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&h=600&fit=crop" alt="Happy person">
+                </div>
+            </div>
+            <div class="hero-logo">WELLTHY</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>At Wellthy, we provide personalized mental health counseling with licensed therapists focused on your unique needs.</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?w=600&h=400&fit=crop" alt="Yoga practice">
+                </div>
+                <div class="about-card">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop" alt="Meditation">
+                </div>
+                <div class="about-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" alt="Counseling">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mental Issues Section -->
+    <section class="mental-issues">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="section-badge">🧠 Mental Issues</span>
+                <h2>We Care About your Life for Better</h2>
+            </div>
+            <div class="issues-content">
+                <ul class="issues-list">
+                    <li>Anxiety Disorders</li>
+                    <li>Depression</li>
+                    <li>Stress Management</li>
+                    <li>Trauma and PTSD</li>
+                    <li>Relationship Issues</li>
+                </ul>
+                <div class="issues-image">
+                    <img src="https://images.unsplash.com/photo-1584930229443-7d241a080dc2?w=600&h=600&fit=crop" alt="Stress Management">
+                    <div class="issues-image-label">Stress Management</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="section-badge">💓 Consultation Services</span>
+            </div>
+            <h2>Comprehensive Mental Health Services</h2>
+            <p class="services-description">A complete range of services to support mental health, including therapy, medication, and crisis help. These services work together to help individuals improve their mental well-being and achieve recovery.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop" alt="Individual Therapy">
+                    <div class="service-card-content">
+                        <h3>Individual Therapy</h3>
+                        <p>Personalized one-on-one sessions with licensed therapists to address your unique mental health needs.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop" alt="Group Therapy">
+                    <div class="service-card-content">
+                        <h3>Group Therapy</h3>
+                        <p>Supportive group sessions where individuals can share experiences from one another in a safe environment.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=400&h=300&fit=crop" alt="Online Counseling">
+                    <div class="service-card-content">
+                        <h3>Online Counseling</h3>
+                        <p>Convenient and confidential virtual therapy sessions that you can attend from the comfort of your home.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=400&h=300&fit=crop" alt="Cognitive Behavioral">
+                    <div class="service-card-content">
+                        <h3>Cognitive Behavioral</h3>
+                        <p>Structured therapy aimed at identifying and changing negative thought patterns to improve mental health.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop" alt="Mindfulness">
+                    <div class="service-card-content">
+                        <h3>Mindfulness and Meditation</h3>
+                        <p>Techniques and practices to help you stay present, reduce stress, and enhance emotional regulation.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop" alt="Psychiatric Consultations">
+                    <div class="service-card-content">
+                        <h3>Psychiatric Consultations</h3>
+                        <p>Professional consultations to assess, diagnose, and provide medication management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healing Path Section -->
+    <section class="healing-path">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="section-badge" style="color: white; border-color: #666;">⚡ Healing Path</span>
+            </div>
+            <h2>Our Holistic Healing Approach to Mental Well-Being</h2>
+            <div class="path-steps">
+                <div class="path-step">1</div>
+                <div class="path-step">2</div>
+                <div class="path-step">3</div>
+                <div class="path-step">4</div>
+                <div class="path-step">5</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-badge">🎁 Benefits</span>
+            </div>
+            <div class="benefits-content">
+                <div>
+                    <h2>The Benefits of Choosing Wellthy</h2>
+                    <p class="benefits-description">Wellthy combines experienced professionals, personalized care, and a supportive environment to provide comprehensive mental health services that meet your unique needs, ensuring privacy, comfort, and lasting support.</p>
+                </div>
+                <div class="benefits-list">
+                    <h3>Experience Professionals</h3>
+                </div>
+            </div>
+            <div class="benefits-image" style="margin-top: 40px;">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&h=400&fit=crop" alt="Professional care">
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-badge">👨‍⚕️ Our Doctors</span>
+            </div>
+            <h2>Meet our Doctors, You're in Good Hands</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=400&fit=crop" alt="Dr. Olivia Bennett">
+                    <div class="doctor-info">
+                        <h3>Dr. Olivia Bennett</h3>
+                        <p>Specializing in career development and burnout
